@@ -21,6 +21,10 @@ function check(req,res,next){
     }
 }
 
+router.get("/",(req,res)=>{
+     res.send("hi");
+});
+
 router.post("/signup",check, async (req,res)=>{
     const username = req.body.username;
     const password = req.body.password;
